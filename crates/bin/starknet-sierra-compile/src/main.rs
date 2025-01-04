@@ -57,7 +57,7 @@ fn main() -> anyhow::Result<()> {
         &fs::read_to_string(&args.file)
             .with_context(|| format!("Failed to read {}.", &args.file))?,
     )
-    .with_context(|| "deserialization Failed.")?;
+    .with_context(|| "deserialization failed.")?;
     let contract_class = ContractClass {
         sierra_program,
         sierra_program_debug_info,
